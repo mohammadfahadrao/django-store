@@ -9,3 +9,6 @@ class Product(models.Model):
     stock = models.IntegerField(MinValueValidator(1), null=False, blank=False)
     product_picture = models.FileField(upload_to="uploads/", default=' ')
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    def __str__(self) -> str:
+        return f"{self.name} {self.description}"
