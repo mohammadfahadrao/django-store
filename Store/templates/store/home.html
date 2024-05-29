@@ -4,13 +4,14 @@
 
         {% for product in products %}
         <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-            <a class="product-item" href="cart.html">
+            <a class="product-item" href="{%url 'addToCart' product.id%}">
                 <img src="{{product.product_picture.url}}" class="img-fluid product-thumbnail">
                 <h3 class="product-title">{{ product.name}}</h3>
                 <strong class="product-price">${{product.price}}</strong>
 
-                <span class="icon-cross">
-                    <img src="{{product.product_picture.url}}" class="img-fluid">
+                <span class="icon-cross no-bg">
+                    {% comment %} <img src="{{product.product_picture.url}}" class="img-fluid"> {% endcomment %}
+                    <button class="btn btn-success">+</button>
                 </span>
             </a>
         </div>

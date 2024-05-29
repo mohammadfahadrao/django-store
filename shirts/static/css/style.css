@@ -9,6 +9,9 @@ body {
   overflow-x: hidden;
   position: relative; }
 
+.no-bg {
+background-color: transparent !important;
+  }
 body {
   font-family: "Inter", sans-serif;
   font-weight: 400;
