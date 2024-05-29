@@ -62,7 +62,7 @@
         
                           </td>
                           <td>${{item.price}}</td>
-                          <td><a href="#" class="btn btn-black btn-sm">X</a></td>
+                          <td><a href="{% url 'deleteCartItem' pid%}" class="btn btn-black btn-sm">X</a></td>
                         </tr>
 						{% endfor %}
         
